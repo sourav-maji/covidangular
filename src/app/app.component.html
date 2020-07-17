@@ -1,0 +1,14 @@
+<div id="a1">
+  <h1 style="border: 5px blue solid; background-color: brown;">CoronaVirus Live Tracker in Angular 9 </h1>
+  <label style="border: 10px blueviolet solid; background-color:red;color: white;">Country</label>
+  <select (change)="getCountry($event.target.value)">
+    <option *ngFor="let item of countries" value={{item.Country}}>
+      {{item.Country}}
+    </option>
+  </select>
+  <br><br>
+  <button style="color: tomato; width: 200px; height: 50px;"  (click)="getCoronaData()">Get CoronaVirus Data</button>
+  <h1 style="border: 5px yellowgreen solid; background-color:crimson;">Total Confirmed Cases:{{Confirmed}}</h1>
+  <h1 style="border: 5px violet solid; background-color:green;">Total Recovered Cases:{{Recovered}}</h1>
+  <h1 style="border: 5px blue solid; background-color:red;">Total Deaths Cases:{{Deaths}}</h1>
+</div>
